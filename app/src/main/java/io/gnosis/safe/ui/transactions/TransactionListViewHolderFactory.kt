@@ -356,7 +356,7 @@ class SwapOrderQueuedViewHolder(private val viewBinding: ItemTxQueuedSwapOrderBi
             status.setTextColor(ResourcesCompat.getColor(resources, viewTransfer.statusColorRes, theme))
 
             dateTime.text = viewTransfer.dateTime.elapsedIntervalTo(Date.from(Instant.now())).format(resources)
-            addressName.text = resources.getString(R.string.tx_list_swap_order)
+            addressName.text = viewTransfer.displayName
 
             confirmationsIcon.setImageDrawable(ResourcesCompat.getDrawable(resources, viewTransfer.confirmationsIcon, theme))
             confirmations.setTextColor(ResourcesCompat.getColor(resources, viewTransfer.confirmationsTextColor, theme))
